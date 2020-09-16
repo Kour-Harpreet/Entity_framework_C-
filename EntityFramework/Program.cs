@@ -23,17 +23,16 @@ namespace EntityFramework
     {
         static void Main(string[] args)
         {
-            // Initialize our database interaction (the context):
             using (CarsContext context = new CarsContext())
             {
-                string model, colour;
-                Console.Write("Please enter a model to change the colour: ");
-                model = Console.ReadLine();
-                Console.Write("Please enter the new colour: ");
-                colour = Console.ReadLine();
-                context.Cars.Where(x => x.Model == model).SingleOrDefault().Colour = colour;
+                string model;
+            Console.Write("Please enter a model to remove: ");
+            model = Console.ReadLine();
 
-                context.SaveChanges();
+            context.Cars.Remove(context.Cars.Where(x => x.Model == model).SingleOrDefault());
+
+            context.SaveChanges();
+
             }
         }
     }
