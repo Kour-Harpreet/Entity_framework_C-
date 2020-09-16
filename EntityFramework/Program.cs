@@ -26,24 +26,12 @@ namespace EntityFramework
             // Initialize our database interaction (the context):
             using (CarsContext context = new CarsContext())
             {
-                string make, model, colour;
-
-                
-                Console.Write("Please enter a Make for your new car: ");
-                make = Console.ReadLine();
-
-                Console.Write("Please enter a Model for your new car: ");
+                string model, colour;
+                Console.Write("Please enter a model to change the colour: ");
                 model = Console.ReadLine();
-
-                Console.Write("Please enter a Colour for your new car: ");
+                Console.Write("Please enter the new colour: ");
                 colour = Console.ReadLine();
-
-                context.Add(new Car()
-                {
-                    Manufacturer = context.Manufacturers.Where(x => x.Name == make).SingleOrDefault(),
-                    Model = model,
-                    Colour = colour
-                });
+                context.Cars.Where(x => x.Model == model).SingleOrDefault().Colour = colour;
 
                 context.SaveChanges();
             }
