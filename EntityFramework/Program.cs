@@ -39,12 +39,29 @@ namespace EntityFramework
 
               Generate the Migration:
             Run "dotnet ef migrations add InitialCreate" in package manager console.
+
             You should then have a Migrations folder created.
+
             Push the Migration to the Database:
+
             Run "dotnet ef database update".
+
             Assuming no errors, your database should now be there.
+
             If you make a mistake, you can remove and recreate your model:
-            Run "dotnet ef migrations remove"
+
+            Run "dotnet ef migrations remove".
+
+            To add a subsequent migration:
+            Run "dotnet ef migrations add FirstSeedData". file gets generated based on this command like ....seeddata.cs 
+
+            Run "dotnet ef database update".
+
+            To rollback a migration on the database:
+
+            Run "dotnet ef database update InitialCreate" (or the name of the target).
+
+            Ensure that the database has been rolled back to before the migration to be removed before removing it.
 
             */
         }
