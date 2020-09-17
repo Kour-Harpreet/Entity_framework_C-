@@ -36,6 +36,7 @@ namespace EntityFramework
 
              5) Modify context OnModelCreating to represent the models that you created.
                 5a) Add a modelBuild.Entity<MODEL_NAME>() call for each model that will set things like the foreign key mapping and the text encoding.
+             6) Add DbSet properties to the context.
 
               Generate the Migration:
             Run "dotnet ef migrations add InitialCreate" in package manager console.
@@ -64,6 +65,26 @@ namespace EntityFramework
             Ensure that the database has been rolled back to before the migration to be removed before removing it.
 
             UNDER NO CIRCUMSTANCES SHOULD YOU MODIFY THE Down() METHOD OF A MIGRATION THAT HAS BEEN APPLIED TO THE DATABASE. IF YOU MUST, ROLL IT BACK FIRST.
+
+
+             Foreign Keys:
+            (In the file containing the foreign key)
+
+            -Ensure that the foriegn key property is present (as a normal field)
+
+            -Add a virtual foreign key property to the bottom of the file.
+
+            (In the file the foreign key points to)
+
+            -Add an inverse list virtual foreign key property.
+
+            (In the context)
+
+            -Update the context to enforce the constraint.
+
+                -Add the entity.HasX() calls
+
+                -Add the entity.HasIndex() call(s)
 
             */
         }

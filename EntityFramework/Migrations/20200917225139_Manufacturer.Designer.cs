@@ -3,14 +3,16 @@ using System;
 using EntityFramework.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EntityFramework.Migrations
 {
     [DbContext(typeof(CarsCodeFirstContext))]
-    partial class CarsCodeFirstContextModelSnapshot : ModelSnapshot
+    [Migration("20200917225139_Manufacturer")]
+    partial class Manufacturer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -66,8 +68,8 @@ namespace EntityFramework.Migrations
                             ID = 1,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 40653,
+                            Model = "Corvette",
+                            Odometer = 291115,
                             TrimLevel = "R/T"
                         },
                         new
@@ -75,18 +77,18 @@ namespace EntityFramework.Migrations
                             ID = 2,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 107721,
-                            TrimLevel = "High Country"
+                            Model = "Corvette",
+                            Odometer = 262549,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 3,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 155723,
-                            TrimLevel = "R/T"
+                            Model = "Durango",
+                            Odometer = 267443,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
@@ -94,16 +96,16 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Fusion",
-                            Odometer = 86307,
-                            TrimLevel = "High Country"
+                            Odometer = 223263,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 5,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 197547,
+                            Model = "Corvette",
+                            Odometer = 44779,
                             TrimLevel = "R/T"
                         },
                         new
@@ -111,9 +113,9 @@ namespace EntityFramework.Migrations
                             ID = 6,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 267839,
-                            TrimLevel = "High Country"
+                            Model = "Corvette",
+                            Odometer = 23513,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
@@ -121,34 +123,34 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Durango",
-                            Odometer = 46158,
-                            TrimLevel = "R/T"
+                            Odometer = 119727,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 8,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 258983,
-                            TrimLevel = "Awesome"
+                            Model = "Durango",
+                            Odometer = 91670,
+                            TrimLevel = "R/T"
                         },
                         new
                         {
                             ID = 9,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 75522,
-                            TrimLevel = "Awesome"
+                            Model = "Durango",
+                            Odometer = 188062,
+                            TrimLevel = "R/T"
                         },
                         new
                         {
                             ID = 10,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 169481,
+                            Model = "Durango",
+                            Odometer = 136247,
                             TrimLevel = "R/T"
                         },
                         new
@@ -156,9 +158,9 @@ namespace EntityFramework.Migrations
                             ID = 11,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 56870,
-                            TrimLevel = "High Country"
+                            Model = "Corvette",
+                            Odometer = 120518,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
@@ -166,16 +168,16 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Fusion",
-                            Odometer = 146296,
-                            TrimLevel = "R/T"
+                            Odometer = 67562,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 13,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 192395,
+                            Model = "Durango",
+                            Odometer = 46465,
                             TrimLevel = "High Country"
                         },
                         new
@@ -183,18 +185,18 @@ namespace EntityFramework.Migrations
                             ID = 14,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 242895,
-                            TrimLevel = "Awesome"
+                            Model = "Durango",
+                            Odometer = 290556,
+                            TrimLevel = "R/T"
                         },
                         new
                         {
                             ID = 15,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 185635,
-                            TrimLevel = "R/T"
+                            Model = "Corvette",
+                            Odometer = 62913,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
@@ -202,16 +204,16 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Durango",
-                            Odometer = 60169,
-                            TrimLevel = "Awesome"
+                            Odometer = 54111,
+                            TrimLevel = "R/T"
                         },
                         new
                         {
                             ID = 17,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 246418,
+                            Model = "Fusion",
+                            Odometer = 289690,
                             TrimLevel = "R/T"
                         },
                         new
@@ -219,27 +221,27 @@ namespace EntityFramework.Migrations
                             ID = 18,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 279487,
-                            TrimLevel = "Awesome"
+                            Model = "Corvette",
+                            Odometer = 129904,
+                            TrimLevel = "R/T"
                         },
                         new
                         {
                             ID = 19,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 226404,
-                            TrimLevel = "R/T"
+                            Model = "Durango",
+                            Odometer = 279769,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 20,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 81373,
-                            TrimLevel = "R/T"
+                            Model = "Fusion",
+                            Odometer = 136970,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
@@ -247,44 +249,44 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Corvette",
-                            Odometer = 281339,
-                            TrimLevel = "Awesome"
+                            Odometer = 137641,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
                             ID = 22,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 296012,
-                            TrimLevel = "High Country"
+                            Model = "Durango",
+                            Odometer = 56084,
+                            TrimLevel = "R/T"
                         },
                         new
                         {
                             ID = 23,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 62456,
-                            TrimLevel = "Awesome"
+                            Model = "Durango",
+                            Odometer = 175835,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
                             ID = 24,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 277479,
-                            TrimLevel = "High Country"
+                            Model = "Fusion",
+                            Odometer = 233940,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 25,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 185311,
-                            TrimLevel = "R/T"
+                            Model = "Fusion",
+                            Odometer = 112951,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
@@ -292,8 +294,8 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Durango",
-                            Odometer = 134490,
-                            TrimLevel = "R/T"
+                            Odometer = 83355,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
@@ -301,25 +303,25 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Corvette",
-                            Odometer = 285030,
-                            TrimLevel = "Awesome"
+                            Odometer = 8230,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
                             ID = 28,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 285247,
-                            TrimLevel = "R/T"
+                            Model = "Durango",
+                            Odometer = 4344,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 29,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 129002,
+                            Model = "Durango",
+                            Odometer = 107986,
                             TrimLevel = "High Country"
                         },
                         new
@@ -327,62 +329,62 @@ namespace EntityFramework.Migrations
                             ID = 30,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 6344,
-                            TrimLevel = "R/T"
+                            Model = "Fusion",
+                            Odometer = 77053,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
                             ID = 31,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 175966,
-                            TrimLevel = "R/T"
+                            Model = "Corvette",
+                            Odometer = 151371,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 32,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 20100,
-                            TrimLevel = "Awesome"
+                            Model = "Fusion",
+                            Odometer = 100011,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
                             ID = 33,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 51696,
-                            TrimLevel = "Awesome"
+                            Model = "Durango",
+                            Odometer = 222072,
+                            TrimLevel = "R/T"
                         },
                         new
                         {
                             ID = 34,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 3814,
-                            TrimLevel = "R/T"
+                            Model = "Corvette",
+                            Odometer = 9770,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
                             ID = 35,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 121808,
-                            TrimLevel = "High Country"
+                            Model = "Durango",
+                            Odometer = 142387,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 36,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 56722,
+                            Model = "Corvette",
+                            Odometer = 101385,
                             TrimLevel = "High Country"
                         },
                         new
@@ -391,44 +393,44 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Corvette",
-                            Odometer = 232073,
-                            TrimLevel = "Awesome"
+                            Odometer = 144623,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
                             ID = 38,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 267810,
-                            TrimLevel = "High Country"
+                            Model = "Durango",
+                            Odometer = 193067,
+                            TrimLevel = "R/T"
                         },
                         new
                         {
                             ID = 39,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 121064,
-                            TrimLevel = "High Country"
+                            Model = "Durango",
+                            Odometer = 115228,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 40,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Fusion",
-                            Odometer = 26378,
-                            TrimLevel = "High Country"
+                            Model = "Durango",
+                            Odometer = 158672,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 41,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 35499,
-                            TrimLevel = "Awesome"
+                            Model = "Fusion",
+                            Odometer = 8286,
+                            TrimLevel = "R/T"
                         },
                         new
                         {
@@ -436,7 +438,7 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Corvette",
-                            Odometer = 198196,
+                            Odometer = 41667,
                             TrimLevel = "R/T"
                         },
                         new
@@ -444,27 +446,27 @@ namespace EntityFramework.Migrations
                             ID = 43,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 187149,
-                            TrimLevel = "Awesome"
+                            Model = "Corvette",
+                            Odometer = 277842,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
                             ID = 44,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Durango",
-                            Odometer = 284333,
-                            TrimLevel = "R/T"
+                            Model = "Corvette",
+                            Odometer = 182976,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
                             ID = 45,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 76033,
-                            TrimLevel = "R/T"
+                            Model = "Durango",
+                            Odometer = 262714,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
@@ -472,8 +474,8 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Fusion",
-                            Odometer = 70201,
-                            TrimLevel = "High Country"
+                            Odometer = 280430,
+                            TrimLevel = "Awesome"
                         },
                         new
                         {
@@ -481,8 +483,8 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Durango",
-                            Odometer = 236269,
-                            TrimLevel = "Awesome"
+                            Odometer = 242136,
+                            TrimLevel = "High Country"
                         },
                         new
                         {
@@ -490,7 +492,7 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Corvette",
-                            Odometer = 235639,
+                            Odometer = 70956,
                             TrimLevel = "Awesome"
                         },
                         new
@@ -498,8 +500,8 @@ namespace EntityFramework.Migrations
                             ID = 49,
                             Colour = "Black",
                             ManufacturerID = 1,
-                            Model = "Corvette",
-                            Odometer = 144275,
+                            Model = "Fusion",
+                            Odometer = 50131,
                             TrimLevel = "R/T"
                         },
                         new
@@ -508,7 +510,7 @@ namespace EntityFramework.Migrations
                             Colour = "Black",
                             ManufacturerID = 1,
                             Model = "Fusion",
-                            Odometer = 267471,
+                            Odometer = 100157,
                             TrimLevel = "High Country"
                         });
                 });
