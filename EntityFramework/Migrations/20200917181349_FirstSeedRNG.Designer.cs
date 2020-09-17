@@ -2,14 +2,16 @@
 using EntityFramework.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EntityFramework.Migrations
 {
     [DbContext(typeof(CarsCodeFirstContext))]
-    partial class CarsCodeFirstContextModelSnapshot : ModelSnapshot
+    [Migration("20200917181349_FirstSeedRNG")]
+    partial class FirstSeedRNG
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

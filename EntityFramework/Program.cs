@@ -63,6 +63,8 @@ namespace EntityFramework
 
             Ensure that the database has been rolled back to before the migration to be removed before removing it.
 
+            UNDER NO CIRCUMSTANCES SHOULD YOU MODIFY THE Down() METHOD OF A MIGRATION THAT HAS BEEN APPLIED TO THE DATABASE. IF YOU MUST, ROLL IT BACK FIRST.
+
             */
         }
     }
