@@ -11,6 +11,9 @@ namespace EntityFramework.Models
     public partial class CodeFirstCar
 
     {
+        // All annotations will bind to the next property in the file.
+
+
         // Declare a primary key.
         // Specifies AUTO_INCREMENT.
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
