@@ -4,36 +4,21 @@ using System.Linq;
 
 namespace EntityFramework
 {
-    // Step 1: Install dotnet-ef if it isn't:
-    // dotnet tool install --global dotnet-ef
-
-    // Step 2: Install the packages in the project:
-    // dotnet add package Microsoft.EntityFrameworkCore.Design
-    // dotnet add package Pomelo.EntityFrameworkCore.MySql
-
-    // Step 3: Create the models and context:
-    // dotnet ef dbcontext scaffold "server=localhost;port=3306;user=root;password=;database=DB_NAME" Pomelo.EntityFrameworkCore.MySql -c CONTEXT_NAME -o Models -f -d
-
-    // Step 4: Pluralize the property names in the context file.
-
-    // Step 5: Pluralize the virtual ICollections in the table classes (and their InverseProperty's).
-
-    // Step 6 (optional): Rename any instances of "Id" to "ID".
     class Program
     {
         static void Main(string[] args)
         {
-            using (CarsContext context = new CarsContext())
-            {
-                string model;
-            Console.Write("Please enter a model to remove: ");
-            model = Console.ReadLine();
-
-            context.Cars.Remove(context.Cars.Where(x => x.Model == model).SingleOrDefault());
-
-            context.SaveChanges();
-
-            }
+            // Using "Code First" techniques allow us to make changes and even create entire databases without writing a single line of SQL.
+            /*
+            1) Add new "Models" folder.
+            2) Add classes to "Models".
+                2a) Add "ThingContext.cs" class inheriting from DbContext.
+                2b) Add column classes.
+            3) Set up skeleton context class.
+                3a) Create constructors.
+                    3a1) Create a empty default constructor.
+                    3a2) Create a constructor that acceps a DbContextOptions<ThisContext> options, and calls the base constructor.
+            */
         }
     }
 }
