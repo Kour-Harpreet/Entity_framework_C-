@@ -77,6 +77,7 @@ namespace EntityFramework
             (In the file the foreign key points to)
 
             -Add an inverse list virtual foreign key property.
+            -Add a constructor that initializes a empty hashset for the virtual property.
 
             (In the context)
 
