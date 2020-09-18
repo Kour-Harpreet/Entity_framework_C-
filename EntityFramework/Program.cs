@@ -4,35 +4,54 @@ using System.Linq;
 
 namespace EntityFramework
 {
-    // Step 1: Install dotnet-ef if it isn't:
-    // dotnet tool install --global dotnet-ef
-
-    // Step 2: Install the packages in the project:
-    // dotnet add package Microsoft.EntityFrameworkCore.Design
-    // dotnet add package Pomelo.EntityFrameworkCore.MySql
-
-    // Step 3: Create the models and context:
-    // dotnet ef dbcontext scaffold "server=localhost;port=3306;user=root;password=;database=DB_NAME" Pomelo.EntityFrameworkCore.MySql -c CONTEXT_NAME -o Models -f -d
-
-    // Step 4: Pluralize the property names in the context file.
-
-    // Step 5: Pluralize the virtual ICollections in the table classes (and their InverseProperty's).
-
-    // Step 6 (optional): Rename any instances of "Id" to "ID".
+   
     class Program
     {
         static void Main(string[] args)
         {
-            using (CarsContext context = new CarsContext())
+            /*
+               Location
+                   -Name
+                   -Address
+                   -PostalCode
+                   -City
+               Employee
+                   -FirstName
+                   -LastName
+                   -BirthDate
+                   -HireDate
+                   -EndDate
+           */
+
+            string name;
+            string location;
+
+            Console.Write("Please enter a Full Name: ");
+            name = Console.ReadLine().Trim().ToUpper();
+            try
             {
-                string model;
-            Console.Write("Please enter a model to remove: ");
-            model = Console.ReadLine();
+                using (EmployeeContext context = new EmployeeContext())
+                {
+                    string firstName = name.Split(' ')[0];
+                    string lastName = name.Split(' ')[1];
+                    // Single will throw an Exception if there is not only one item in a collection.
+                    // SingleOrDefault will return null if there is not only one.
+                    Employee target = context.Employees.Where(x => x.FirstName == firstName && x.LastName == lastName).Single();
 
-            context.Cars.Remove(context.Cars.Where(x => x.Model == model).SingleOrDefault());
+                    
+                        // Until we convert to a list, we are operating on a DbSet collection.
+                        // DbSets require all operations performed thereon to have a direct translation to SQL.
+                        // Since Contains() does not (it should translate to IN but I digress), we have to pull the full table and evaluate on our server instead of the database.
+                        // Converting the DbSet to a List will force evaluation of the DbSet as-is, we can then query the list as if they were normal objects.
+                        Location work = context.Locations.ToList().Where(x => x.Employees.Contains(target)).Single();
 
-            context.SaveChanges();
-
+                    location = $"{work.Name} - {work.Address} {work.PostalCode}, {work.City}";
+                    Console.WriteLine($"That person works at {location}.");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Encountered Exception: " + e.Message);
             }
         }
     }
