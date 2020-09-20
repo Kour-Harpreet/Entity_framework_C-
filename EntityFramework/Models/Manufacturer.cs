@@ -23,6 +23,7 @@ namespace EntityFramework.Models
         [Required]
         [Column("name", TypeName = "varchar(30)")]
         public string Name { get; set; }
+
         [Column("year_founded", TypeName = "int(10)")]
         public int? YearFounded { get; set; } // ? denotes null
 
